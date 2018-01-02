@@ -21,4 +21,5 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+# rails_menu
+Ruby on rails restaurant menu sample
