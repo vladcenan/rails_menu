@@ -1,0 +1,22 @@
+<h1>Menu</h1>
+<p>Welcome to <%= link_to "Menu", menu_path %></p>
+<p><%= formatted_time(@time) %></p>
+<p>Please choose menu</p>
+<p><%= link_to "Food", menu_food_path %></p>
+<p><%= link_to "Beverages", menu_beverages_path %></p>
+
+<h1>Searching for <%= @search_term %></h1>
+<table border ="1">
+  <tr>
+    <th>Image</th>
+    <th>Publisher</th>
+    <th>Recipe Name</th>
+  </tr>
+  <% @menus.each do |recipe| %>
+    <tr class=<%= cycle('even','odd')%>>
+      <td><%= image_tag(recipe["image_url"]) %></td>
+      <td><%= recipe["publisher"] %></td>
+      <td><%= recipe["title"] %></td>
+    </tr>
+  <% end %>
+</table>
